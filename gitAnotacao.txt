@@ -1,0 +1,168 @@
+Para ver se o git esta instalado
+-git no terminal do ubuntu
+-no windows use o gitbash
+
+Configuração Inicial do git
+- Digite:
+git config --global user.name "Ricardo Vital"
+git config --global user.email "ryckyvital@gmail.com"
+git config --global color.ui true
+
+Criando uma pasta no ubuntu
+mkdir testgit
+
+Acessar o Dirétorio
+cd testgit
+
+Criar um dirétorio do git
+git init
+
+Endereço da pasta oculta criado pelo comando git init
+/home/ricky/aulagit/.git/
+
+Criando arquivo .txt
+touch arquivo.txt
+
+git status
+ver o initial commit
+
+git add arquivo.txt
+adicionar um arquivo ao git
+
+git commit -m  "Meu primeiro commit"
+comitar um arquivo
+
+comitando varios arquivos ao mesmo tempo
+git commit -a -m "Comitando arquivo e teste junto"
+
+git add .
+Adicionar todos os arquivos
+
+git commit -a -m "Commitando arquivo e teste juntos"
+commitando os arquivo que estão no estagio changes not staged for commit
+
+git log
+ver os arquivo que foram comitado
+
+git log -p
+mostra a diferença de um arquivo para outro de todos criados
+
+git log -p -2
+mostra a diferença de um arquivo dos dois ultimos criandos
+
+git log --stat
+mostra o git log e as estatiticas de todos os commits
+
+git log --pretty=oneline
+tras os commits tudo em uma linha só
+
+git log --pretty=format:"%h - %an, %ar : %s"
+mostra o inicio do commit, quem commitou e o codigo do commit
+
+git log --since=2.days
+pegar o commit dos ultimos dois dias
+
+touch .idea/teste
+criando arquivo para ser ignorado exemplo:. (.idea/teste)
+
+vim .gitignore
+criar o .gitignore
+
+dentro do arquivo .gitignore inserir a pasta a ser ignorada exemplo: .idea/
+
+git reset HEAD teste2.txt(nome_do_arquivo)
+o arquivo que esta no changes volta para untracked files.
+
+git reset HEAD~1=>O número é o tanto de commit que deseja voltar
+Voltando um commit
+
+git reset HEAD~1 --soft
+remove o commit mas ele deixa os arquivo que estavamos trabalhando
+
+git reset HEAD~1 --hard
+remove o commit e o arquivo que estavamos trabalhando
+
+git checkout 4cdffdd099f40c9ed878497c363c818223988714(nome_do_hast)
+voltar a versão
+
+git checkout master
+voltar para a versão logica
+
+git branch
+para saber em qual branch você está
+
+git checkout -b funcionalidade1(nome_do_branch)
+criando um novo branch
+
+git merge funcionalidade1
+pegar os commit no funcionalidade1 e colar no master(ou jogar no master) ou virce e versa
+
+git rebase funcionalidade1
+rebobinando a cabeça, para deixar todos em ordem e aplica o funcionalidade1 no master
+obs: tem que ser feito, localmente.
+
+
+------------------------------------------------------------------------------------------
+
+ssh-keygen
+gerar uma chave no git
+
+cd ~/.ssh/
+para entrar na pasta onde foi criado a chave
+
+cat id_rsa.pub
+imprimi o conteúdo do arquivo
+
+git remote add origin https://github.com/ricardovital/estudo-git.git
+Para criarem este link e configurarem o repositório local
+
+git push origin master
+empurrar ou subir os arquivo para o github
+
+git checkout funcionalidade1
+acessando o branch funcionalidade1
+
+git push origin funcionalidade1
+subindo o novo branch para o github funcionalidade1
+
+rm -rf aulagit/
+remover a pasta
+
+git clone https://github.com/ricardovital/estudo-git.git nome_da_pasta(se quiser colocar o nome da pasta)
+clonar os arquivos do github na maquina local
+
+git branch -a
+mostras o branch locais e remotos
+
+git checkout -b funcionalidade1 origin/funcionalidade1
+criar o branch remota, depois de clonado do github e depois de ver com o comando git branch -a
+
+git pull
+verificar se todos os arquivos estão sincronizados
+
+git push origin master
+subindo todas os ultimos commit para o repositorio
+
+git pull origin master
+pegar ou puxar, ou trazer as alteração que estão no repositorio remoto... o pull é o inverso do push
+
+git push origin novobranch(nome_do_novo_branch)
+criar um novo branch no repositório remoto
+
+mkdir gitCode
+criando a pasta
+
+mv aulagit/ gitCode/
+movendo a pasta para gitCode
+
+mv git-code-education/ gitCode/
+movendo a pasta para gitCode
+
+
+
+
+
+
+
+
+
