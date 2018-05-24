@@ -158,6 +158,15 @@ movendo a pasta para gitCode
 mv git-code-education/ gitCode/
 movendo a pasta para gitCode
 
+git tag 0.1.0(versão_gerada)
+para gerar uma versão, ou finalizar a versão no qual estava sendo produzida
+
+git tag -l
+mostra todas as versões geradas.
+
+git push origin master --tags
+sobe todas as tags locais para o github.
+
 
 
 
